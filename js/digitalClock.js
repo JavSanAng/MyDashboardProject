@@ -131,20 +131,21 @@ function formatTwoDigits(number) {
 
 //Funcion que obtiene el mensaje dependiendo de la hora y los minutos
 function getMessage(hours, minutes) {
-    if (hours < 7 || (hours === 7 && minutes < 1)) {
+    if (hours < 7 || (hours === 7 && minutes < 30)) {
         return "¿Ya te dormiste en el teclado? Mejor ve a la cama, mañana será otro día";
-    } else if (hours <= 8) {
+    } else if (hours < 8 || (hours === 8 && minutes < 30)) {
         return "¡Buenos días, codificador! ¿Listo para desayunar bytes y dominar el mundo?";
-    } else if (hours <= 16 || (hours === 17 && minutes < 1)) {
+    } else if (hours < 17 || (hours === 17 && minutes < 30)) {
         return "¡Espero que hayas comido algo! Si no, ¿qué tal una pausa para picar algo?";
-    } else if (hours <= 18 || (hours === 19 && minutes < 1)) {
+    } else if (hours < 19 || (hours === 19 && minutes < 30)) {
         return "¡Buenas tardes! ¡Vamos a exprimir esos últimos bits de energía!";
-    } else if (hours <= 20 || (hours === 21 && minutes < 1)) {
+    } else if (hours < 21 || (hours === 21 && minutes < 30)) {
         return "¿Sigues aquí? Piensa en parar pronto y hacer algo de vida social (virtual, al menos).";
     } else {
         return "¡Buenas noches! Los sueños pueden ser el mejor depurador de código.";
     }
 }
+
 
 // Agregar evento de clic al elemento del reloj en el menú
 const clockMenuItem = document.querySelector('.item span[title="Reloj"]');

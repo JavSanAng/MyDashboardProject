@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+
 @font-face {
     font-family: 'rayada'; 
     src: url('/fonts/rayada.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'pixel'; 
     src: url('/fonts/pixel.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'alta'; 
     src: url('/fonts/alta.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'round'; 
     src: url('/fonts/round.ttf') format('truetype');
@@ -34,24 +38,24 @@ body {
 }
 
 #time {
-	font-family: 'pixel';
+    font-family: 'pixel';
     color: rgb(0, 0, 0);
     font-size: 5em;
     animation: rainbow 2s linear infinite;
 }
 
 #date {
-	font-family: 'alta'; 
-	font-size: 4.5em;
-	animation: glow 1s ease-in infinite alternate;
+    font-family: 'alta'; 
+    font-size: 4.5em;
+    animation: glow 1s ease-in infinite alternate;
 }
 
 #message {
+    font-family: 'round'; 
     color: rgb(7, 7, 7);
     font-size: 2em;
     animation: glow 1s ease-out infinite alternate;
-	font-family: 'round'; 
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .menu {
@@ -71,12 +75,12 @@ body {
 }
 
 .label {
-	font-family: 'round'; 
-	font-size: 48px;
+    font-family: 'round'; 
+    font-size: 48px;
     display: inline-block;
     cursor: pointer;
     pointer-events: all;
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
 .spacer {
@@ -87,7 +91,7 @@ body {
     vertical-align: middle;
     cursor: pointer;
     position: relative;
-	animation: rainbow linear 2s infinite;
+    animation: rainbow linear 2s infinite;
 }
 
 .spacer:before {
@@ -101,16 +105,16 @@ body {
 }
 
 .item {
-	font-family: 'Rayada'; 
-	font-size: 36px;
+    font-family: 'Rayada'; 
+    font-size: 36px;
     position: relative;
     display: inline-block;
     margin-right: 30px;
     top: 10px;
     opacity: 0;
-    transition: opacity 0.3s ease, top 0.3s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
     transition-delay: 0;
-	vertical-align: middle; /* Centrar verticalmente */
+    vertical-align: middle; /* Centrar verticalmente */
 }
 
 span {
@@ -129,33 +133,23 @@ span {
 .menu:hover .item {
     opacity: 1;
     top: 0px;
+    transform: translateY(0);
 }
 
-
-.item:nth-child(1) {
-	transition-delay: 0.15s; /* Reloj */
-}
-.item:nth-child(2) {
-	transition-delay: 0.25s; /* Contraseñas */
-}
-.item:nth-child(3) {
-	transition-delay: 0.35s; /* Meteo */
-}
-.item:nth-child(4) {
-	transition-delay: 0.45s; /* Enlaces */
+.menu:hover #clock {
+    transition-delay: 0.1s; /* Reloj */
 }
 
-.menu:hover .item:nth-child(1) {
-	transition-delay: 0.45s; /* Reloj */
+.menu:hover #links {
+    transition-delay: 0.2s; /* Enlaces */
 }
-.menu:hover .item:nth-child(2) {
-	transition-delay: 0.4s; /* Contraseñas */
+
+.menu:hover #meteo {
+    transition-delay: 0.3s; /* Meteo */
 }
-.menu:hover .item:nth-child(3) {
-	transition-delay: 0.3s; /* Meteo */
-}
-.menu:hover .item:nth-child(4) {
-	transition-delay: 0.25s; /* Enlaces */
+
+.menu:hover #keys {
+    transition-delay: 0.4s; /* Contraseñas */
 }
 
 /* Animaciones */
@@ -173,12 +167,11 @@ span {
     100% { color: #ff0000; }
 }
 
-#icon {
-	height: 50px;
-	width: 50px;
+.icon {
+    height: 50px;
+    width: 50px;
 }
 
 #icon:hover {
-	transform: scale(1.1);
+    transform: scale(1.1);
 }
-
