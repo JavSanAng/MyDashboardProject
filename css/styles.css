@@ -32,6 +32,12 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.container-containers{
+    display: flex;
+    flex-direction: column;
+    padding-top: auto;
+}
+
 .container-clock {
     display: none; 
     text-align: center;
@@ -56,6 +62,14 @@ body {
     font-size: 2em;
     animation: glow 1s ease-out infinite alternate;
     text-transform: uppercase;
+}
+
+.container-keys {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid lightsalmon;
+    background-color: aliceblue;
 }
 
 .menu {
