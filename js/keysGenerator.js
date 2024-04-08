@@ -47,9 +47,8 @@ function validationNumber() {
     const error = document.getElementById("error");
     if (number >= 12 && number <= 50) {
         console.log("Your number is valid", number);
-        error.innerText = ""; // Limpiar el error
-        
-        generateKey(number); // Llamar a la función para generar contraseña
+        error.innerText = "";
+        generateKey(number); 
     } else {
         result.innerText = "";
         error.innerText = "Your number is not valid, remember min 12 max 50";

@@ -154,17 +154,19 @@ span {
     transition-delay: 0.1s; /* Reloj */
 }
 
+.menu:hover #keys {
+    transition-delay: 0.2s; /* Contraseñas */
+}
+
 .menu:hover #links {
-    transition-delay: 0.2s; /* Enlaces */
+    transition-delay: 0.3s; /* Enlaces */
 }
 
 .menu:hover #meteo {
-    transition-delay: 0.3s; /* Meteo */
+    transition-delay: 0.4s; /* Meteo */
 }
 
-.menu:hover #keys {
-    transition-delay: 0.4s; /* Contraseñas */
-}
+
 
 /* Animaciones */
 @keyframes glow {
@@ -186,6 +188,7 @@ span {
     width: 50px;
 }
 
-#icon:hover {
+.icon:hover {
     transform: scale(1.1);
 }
+
