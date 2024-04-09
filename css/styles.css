@@ -32,45 +32,64 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.container-containers{
+.container-containers {
+    max-height: 75%;
+    max-width: 75% ; 
+    margin: 0 auto; 
+    padding: 20px; 
     display: flex;
-    flex-direction: column;
-    padding-top: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.container-clock {
-    display: none; 
-    text-align: center;
-}
-
-#time {
-    font-family: 'pixel';
-    color: rgb(0, 0, 0);
-    font-size: 5em;
-    animation: rainbow 2s linear infinite;
-}
-
-#date {
-    font-family: 'alta'; 
-    font-size: 4.5em;
-    animation: glow 1s ease-in infinite alternate;
-}
-
-#message {
-    font-family: 'round'; 
-    color: rgb(7, 7, 7);
-    font-size: 2em;
-    animation: glow 1s ease-out infinite alternate;
-    text-transform: uppercase;
-}
-
-.container-keys {
+.container-containers .container-clock,
+.container-containers .container-keys,
+.container-containers .container-meteo,
+.container-containers .container-links {
     display: none;
-    text-align: center;
-    padding: 10px;
-    border: 1px solid lightsalmon;
-    background-color: aliceblue;
+    flex: 1; 
+    margin: 10px; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #f8f8f8; 
+    text-align: center; 
 }
+
+.container-clock h1 {
+    animation:  rainbow 1s ease-in-out infinite alternate;
+}
+
+.container-meteo {
+    max-width: 95%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+}
+
+#forecast-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 5px;
+    margin: 10px;
+    overflow-x: auto; /* Scroll lateral  */
+}
+
+#forecast-list li {
+    margin-right: 10px;
+}
+
+#forecast-list p {
+    margin: 0;
+}
+
 
 .menu {
     text-transform: uppercase;
@@ -105,7 +124,6 @@ body {
     vertical-align: middle;
     cursor: pointer;
     position: relative;
-    animation: rainbow linear 2s infinite;
 }
 
 .spacer:before {
@@ -128,7 +146,7 @@ body {
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
     transition-delay: 0;
-    vertical-align: middle; /* Centrar verticalmente */
+    vertical-align: middle; 
 }
 
 span {
@@ -166,8 +184,6 @@ span {
     transition-delay: 0.4s; /* Meteo */
 }
 
-
-
 /* Animaciones */
 @keyframes glow {
     0% { text-shadow: 0 0 10px #ffffff; }
@@ -192,3 +208,66 @@ span {
     transform: scale(1.1);
 }
 
+/* Desing Inputs */
+
+#nameInput, #linkInput, #lengthKey {
+    margin: 5px;
+    width: 200px;
+    border: 2px solid transparent;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+#nameInput, #linkInput, #lengthKey:hover,
+#nameInput, #linkInput, #lengthKey:focus {
+    border: 2px solid #4A9DEC;
+    box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 30px rgb(0,140,255);
+    background-color: white;
+}
+
+/* Button Generate keys */
+
+#btnGenerate, #saveLinkButton {
+    width: 210px;
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+}
+
+#btnGenerate, #saveLinkButton {
+    background: rgb(0,140,255);
+    box-shadow: 0 0 12px rgb(0,140,255);
+}
+#btnGenerate, #saveLinkButton:hover {
+    box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 30px rgb(0,140,255);
+}
+
+#linksList {
+    text-transform: uppercase;
+    list-style: none;
+}
+
+#linksList a {
+    text-decoration: none;
+}
+#crossList {
+    padding: 3px;
+    background-color: rgb(0,140,255);
+    border-radius: 3px;
+    border: 0.2px;
+    color:white; 
+}

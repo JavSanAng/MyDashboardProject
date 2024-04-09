@@ -72,6 +72,7 @@ const apiKey = "4ea4595c21424726abd63707240804";
                     target.append(hourForecast, imageForecast, temperature);
                     console.log(target);
                     forecastList.appendChild(target);
+                    meteoContainer.appendChild(forecastList);
                 });
         }
 
