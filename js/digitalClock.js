@@ -148,7 +148,7 @@ function getMessage(hours, minutes) {
 
 
 // Agregar evento de clic al elemento del reloj en el menú
-const clockMenuItem = document.querySelector('.item span[title="Reloj"]');
+const clockMenuItem = document.querySelector('.item span[title="Clock"]');
 clockMenuItem.addEventListener('click', toggleClockVisibility);
 
 //Funcion para mostrar el reloj

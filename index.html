@@ -11,13 +11,14 @@
     <div class="menu">
         <div class="label">Options </div>
         <div class="spacer"></div>
-        <div class="item" id="clock"><span title="Reloj"><img src="/assets/clockIcon.png" class="icon"></span></div>
-        <div class="item" id="keys"><span title="Contraseñas"><img src="/assets/keyIcon.png" class="icon"></span></div>
-        <div class="item" id="links"><span title="Enlaces"><img src="/assets/linkIcon.png" class="icon"></span></div>
+        <div class="item" id="clock"><span title="Clock"><img src="/assets/clockIcon.png" class="icon"></span></div>
+        <div class="item" id="keys"><span title="KeysGenerator"><img src="/assets/keyIcon.png" class="icon"></span></div>
+        <div class="item" id="links"><span title="Links"><img src="/assets/linkIcon.png" class="icon"></span></div>
         <div class="item" id="meteo"><span title="Meteo"><img src="/assets/meteoIcon.png" class="icon"></span></div>
     </div>
     
     <div class="container-containers" id="container-containers">
+        
         <div class="container-clock" id="container-clock">
             <h1 id="time">00:00:00</h1>
             <p id="date">date</p>
@@ -49,11 +50,24 @@
         </ul>
         </div>
 
+        <div id="modalDiv" style="display:none;">
+            <button id="btnQuotes" onclick="openModal()">Open tutorial</button>
+        </div>
+        
+        <dialog id="modal2">
+            <h2>This is a tutorial</h2>
+            <p>This is your first time here</p>
+            <img src="">
+            <button onclick="closeModal()">Close Page</button>
+        </dialog>
+
     </div>
     <script src="/js/digitalClock.js"></script>
     <script src="/js/keysGenerator.js"></script>
     <script src="/js/links.js"></script>
     <script src="/js/meteo.js"></script> 
+    <script src="/js/research.js"></script> 
+
 
 </body>
 </html>

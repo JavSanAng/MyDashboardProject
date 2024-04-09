@@ -71,7 +71,7 @@ function generateKey(lengthKey) {
     result.innerText = 'Key: ' + randomKey;
 }
 
-const keysMenuItem = document.querySelector('.item span[title="Contraseñas"]');
+const keysMenuItem = document.querySelector('.item span[title="KeysGenerator"]');
 keysMenuItem.addEventListener('click', toggleKeysVisibility);
 
 function toggleKeysVisibility() {

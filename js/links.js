@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para eliminar un enlace de la lista
     function linksDelete(index) {
-        savedLinks.splice(index, 1); // Eliminamos el enlace en la posición indicada
+        savedLinks.splice(index, 1); // Eliminamos el enlace en la posición indicada/ numero de items a eliminar
         localStorage.setItem("links", JSON.stringify(savedLinks)); // Guardamos la lista actualizada en el almacenamiento local
         linksRender(); // Renderizamos la lista de enlaces
     }
@@ -48,12 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    //linksDelete le damos ambito global para que pueda ser llamarse desde el HTML
+    //linksDelete le damos ambito global para que se pueda  llamar desde el HTML
     window.linksDelete = linksDelete;
 
     linksRender();
 
-	const linkMenuItem = document.querySelector('.item span[title="Enlaces"]');
+	const linkMenuItem = document.querySelector('.item span[title="Links"]');
 linkMenuItem.addEventListener('click', toggleKeysVisibility);
 
 	function toggleKeysVisibility() {

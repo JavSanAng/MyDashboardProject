@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 @font-face {
-    font-family: 'rayada'; 
+    font-family: 'rayada';
     src: url('/fonts/rayada.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'pixel'; 
+    font-family: 'pixel';
     src: url('/fonts/pixel.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'alta'; 
+    font-family: 'alta';
     src: url('/fonts/alta.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'round'; 
+    font-family: 'round';
     src: url('/fonts/round.ttf') format('truetype');
 }
 
@@ -34,9 +34,9 @@ body {
 
 .container-containers {
     max-height: 75%;
-    max-width: 75% ; 
-    margin: 0 auto; 
-    padding: 20px; 
+    max-width: 75% ;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -48,13 +48,13 @@ body {
 .container-containers .container-meteo,
 .container-containers .container-links {
     display: none;
-    flex: 1; 
-    margin: 10px; 
-    padding: 20px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    background-color: #f8f8f8; 
-    text-align: center; 
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+    text-align: center;
 }
 
 .container-clock h1 {
@@ -64,8 +64,8 @@ body {
 .container-meteo {
     max-width: 95%;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
@@ -98,7 +98,7 @@ body {
     cursor: pointer;
     pointer-events: none;
     position: absolute;
-    top: 20px; 
+    top: 20px;
     left: 20px;
     transition: opacity 0.3s ease;
 }
@@ -108,7 +108,7 @@ body {
 }
 
 .label {
-    font-family: 'round'; 
+    font-family: 'round';
     font-size: 48px;
     display: inline-block;
     cursor: pointer;
@@ -132,29 +132,25 @@ body {
     border-bottom: 1px solid #000000;
     height: 1px;
     width: 0%;
-    transition: width 0.2s ease;
-    transition-delay: 0.7s;
+    transition: width 0.5s ease;
+    transition-delay: 1s;
 }
 
 .item {
-    font-family: 'Rayada'; 
+    font-family: 'Rayada';
     font-size: 36px;
     position: relative;
     display: inline-block;
-    margin-right: 30px;
-    top: 10px;
+    margin-right: 40px;
+    top: 0px;
     opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 1s ease-in, transform 3s ease-out;
     transition-delay: 0;
-    vertical-align: middle; 
+    vertical-align: middle;
 }
 
 span {
-    transition: color 0.5s ease;
-}
-
-.item:hover span {
-    color: #ff0000;
+    transition: color 0.3s ease-in;
 }
 
 .menu:hover .spacer:before {
@@ -169,19 +165,19 @@ span {
 }
 
 .menu:hover #clock {
-    transition-delay: 0.1s; /* Reloj */
+    transition-delay: 0.2s; 
 }
 
 .menu:hover #keys {
-    transition-delay: 0.2s; /* Contraseñas */
+    transition-delay: 0.3s; 
 }
 
 .menu:hover #links {
-    transition-delay: 0.3s; /* Enlaces */
+    transition-delay: 0.4s; 
 }
 
 .menu:hover #meteo {
-    transition-delay: 0.4s; /* Meteo */
+    transition-delay: 0.5s; 
 }
 
 /* Animaciones */
@@ -269,5 +265,5 @@ span {
     background-color: rgb(0,140,255);
     border-radius: 3px;
     border: 0.2px;
-    color:white; 
+    color:white;
 }
