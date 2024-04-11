@@ -53,16 +53,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     linksRender();
 
-	const linkMenuItem = document.querySelector('.item span[title="Links"]');
+const linkMenuItem = document.querySelector('.item span[title="Links"]');
 linkMenuItem.addEventListener('click', toggleKeysVisibility);
 
 	function toggleKeysVisibility() {
 		if (linkContainer.style.display === "" || linkContainer.style.display === "none") {
 			linkContainer.style.display = "block";
+            localStorage.setItem('linkVisibility', 'pin');
 		} else {
 			linkContainer.style.display = "none";
+            localStorage.setItem('linkVisibility', 'unnpin');
 		}
 	}
-
-});
+    
+    const linkVisibility = localStorage.getItem('linkVisibility');
+        if (linkVisibility === 'pin') {
+            linkContainer.style.display = "block";
+        } else if (linkVisibility === 'unnpin') {
+            linkContainer.style.display = "none";
+        }
+    });
+    
 

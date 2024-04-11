@@ -155,10 +155,20 @@ clockMenuItem.addEventListener('click', toggleClockVisibility);
 function toggleClockVisibility() {
     if (clockContainer.style.display === "none" || clockContainer.style.display === "") {
         clockContainer.style.display = "block";
+        localStorage.setItem('clockVisibility', 'pin');
     } else {
         clockContainer.style.display = "none";
+        localStorage.setItem('clockVisibility', 'unnpin');
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const clockVisibility = localStorage.getItem('clockVisibility');
+    if (clockVisibility === 'pin') {
+        clockContainer.style.display = "block";
+    } else if (clockVisibility === 'unnpin') {
+        clockContainer.style.display = "none";
+    }
+});
 
 // Actualizar hora, fecha y mensaje cada segundo
 setInterval(updateTimeAndDate, 1000);

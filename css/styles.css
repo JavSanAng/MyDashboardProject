@@ -101,6 +101,7 @@ body {
     top: 20px;
     left: 20px;
     transition: opacity 0.3s ease;
+
 }
 
 .menu:hover {
@@ -147,6 +148,7 @@ body {
     transition: opacity 1s ease-in, transform 3s ease-out;
     transition-delay: 0;
     vertical-align: middle;
+
 }
 
 span {
@@ -204,7 +206,24 @@ span {
     transform: scale(1.1);
 }
 
+@keyframes moveAndScale {
+    0% {transform: translateY(250%) rotate(-90deg) ;}
+    /* 25% {transform: translateY(75%) rotate(-90deg) ;}
+    50% {transform: translateY(50%) rotate(-90deg) ;}
+    75% {transform: translateY(25%) rotate(-90deg) ;} */
+    100% {transform: translateY(0) rotate(-90deg) ;}
+}
 /* Animation arrow, DUDAS CON ESTA ANIMACION FLECHA  */
+
+.arrow img {
+    height: 70px;
+    width: auto;
+    rotate:(-90deg);
+    animation: moveAndScale 0.9s infinite;
+}
+
+
+
 /* 
 div.arrow {
 	width: 6vmin;
@@ -243,17 +262,16 @@ div.arrow {
 	}
 	
 	&:hover::after {
-		transform: rotate(45deg);
+		transform: rotate(45deg) ;
 		border-color: rgb(0,140,255);
 		height: 120%;
 	}
 	&:hover::before {
         border-color: rgb(0,140,255);
-		transform: scale(0.8);
-		
+		transform:  scale(0.8);
 	}
 	
-} */
+}  */
 /* Desing Inputs */
 
 #nameInput, #linkInput, #lengthKey {
@@ -321,24 +339,25 @@ div.arrow {
 /* Design Modal First Time */
 
 #modal2 {
-    width: 190vh;
-    height: 80vh;
-    background-color:rgba(255, 255, 255, 0);
+    width: 180vh;
+    height: 70vh;
+    background-color:rgba(255, 255, 255, 0.739);
     border:solid .1px rgba(0, 140, 255, 0.203); 
 }
 
 /* Design buttons modals */
 
 #btnOpenModal , #btnCloseModal {
+    font-family: 'round';
     width: 210px;
     margin: 5px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border: none;
-    font-size: 16px;
+    font-size: 22px;
     color: #fff;
     border-radius: 7px;
-    letter-spacing: 4px;
-    font-weight: 700;
+    letter-spacing: 3px;
+    font-weight: 600;
     text-transform: uppercase;
     transition: 0.5s;
     transition-property: box-shadow;
@@ -347,10 +366,6 @@ div.arrow {
 #btnOpenModal , #btnCloseModal {
     background: rgb(0,140,255);
     box-shadow: 0 0 12px rgb(0,140,255);
-}
-
-#btnCloseModal {
-
 }
 
 #btnOpenModal:hover {
@@ -362,4 +377,36 @@ div.arrow {
 #btnCloseModal:hover {
     box-shadow: 0 0 5px rgb(0,140,255),
                 0 0 30px rgb(0,140,255);
+}
+
+/* Format modal Dialog, animation */
+
+#btnClose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#btnCloseModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btnClose h3 {
+    font-family: 'round';
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 800;
+    animation:  glow 0.5s ease-in-out infinite alternate;
+}
+#btnClose ol {
+    font-family: 'round';
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
 }

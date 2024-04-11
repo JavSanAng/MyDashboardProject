@@ -77,7 +77,18 @@ keysMenuItem.addEventListener('click', toggleKeysVisibility);
 function toggleKeysVisibility() {
     if (keysContainer.style.display === "" || keysContainer.style.display === "none") {
         keysContainer.style.display = "block";
+        localStorage.setItem('keyVisibility', 'pin');
     } else {
         keysContainer.style.display = "none";
+        localStorage.setItem('keyVisibility', 'unnpin');
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const keyVisibility = localStorage.getItem('keyVisibility');
+    if (keyVisibility === 'pin') {
+        keysContainer.style.display = "block";
+    } else if (keyVisibility === 'unnpin') {
+        keysContainer.style.display = "none";
+    }
+});

@@ -34,7 +34,7 @@
 
         <div class="container-links" id="container-links">
             <form id="linkForm">
-
+                
                 <label for="name"></label>
                 <input type="text" id="nameInput" placeholder="Name of the link." required>
         
@@ -55,8 +55,18 @@
         </div>
         
         <dialog id="modal2">
-            <!-- <div class="arrow"></div> DUDAS CON ESTA ANIMACION-->
-            <button id="btnCloseModal" onclick="closeModal()">Close Page</button>
+            <div class="arrow">
+                <img src="assets/arrow.png" alt="arrow">
+            </div> 
+            <div id="btnClose">
+                <h3>Instructions</h3>
+                <ol>  
+                    <li>To open the menu: Click on the "Options" label.</li>
+                    <li>To pin an widget: Click on the desired icon. The widget will remain visible even after closing the menu.</li>
+                    <li>To unpin an widget: Click on the pinned item again. It will return to its original state, hiding when the menu is closed.</li>
+                </ol>
+                <button id="btnCloseModal" onclick="closeModal()">Close tutorial</button>
+            </div>
         </dialog>
 
     </div>

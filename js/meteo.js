@@ -82,7 +82,18 @@ const apiKey = "4ea4595c21424726abd63707240804";
         function toggleMeteoVisibility() {
             if (meteoContainer.style.display === "" || meteoContainer.style.display === "none") {
                 meteoContainer.style.display = "block";
+                localStorage.setItem('meteoVisibility', 'pin');
             } else {
                 meteoContainer.style.display = "none";
+                localStorage.setItem('meteoVisibility', 'unnpin');
             }
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const meteoVisibility = localStorage.getItem('meteoVisibility');
+            if (meteoVisibility === 'pin') {
+                meteoContainer.style.display = "block";
+            } else if (meteoVisibility === 'unnpin') {
+                meteoContainer.style.display = "none";
+            }
+        });
