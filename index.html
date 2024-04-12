@@ -11,10 +11,10 @@
     <div class="menu">
         <div class="label">Options </div>
         <div class="spacer"></div>
-        <div class="item" id="clock"><span title="Clock"><img src="/assets/clockIcon.png" class="icon"></span></div>
-        <div class="item" id="keys"><span title="KeysGenerator"><img src="/assets/keyIcon.png" class="icon"></span></div>
-        <div class="item" id="links"><span title="Links"><img src="/assets/linkIcon.png" class="icon"></span></div>
-        <div class="item" id="meteo"><span title="Meteo"><img src="/assets/meteoIcon.png" class="icon"></span></div>
+        <div class="item" id="clock"><span title="Clock"><img src="/assets/clockIcon.png" class="icon" alt="clock"></span></div>
+        <div class="item" id="keys"><span title="KeysGenerator"><img src="/assets/keyIcon.png" class="icon" alt="key"></span></div>
+        <div class="item" id="links"><span title="Links"><img src="/assets/linkIcon.png" class="icon" alt="link"></span></div>
+        <div class="item" id="meteo"><span title="Meteo"><img src="/assets/meteoIcon.png" class="icon" alt="meteo"></span></div>
     </div>
     
     <div class="container-containers" id="container-containers">
@@ -25,20 +25,20 @@
             <p id="message"></p>
         </div>
         <div class="container-keys" id="container-keys">
-            <label for="lengthKey"></label>
+            <!-- <label for="lengthKey"></label> -->
             <input type="number" id="lengthKey" placeholder="Enter the key length" maxlength="2">
             <button type="submit" id="btnGenerate">Generate</button>
             <p id="error"></p>
-            <h3 id="resultKey"></h2>
+            <h3 id="resultKey"></h3>
         </div>
 
         <div class="container-links" id="container-links">
             <form id="linkForm">
                 
-                <label for="name"></label>
+                <!-- <label for="name"></label> -->
                 <input type="text" id="nameInput" placeholder="Name of the link." required>
         
-                <label for="link"></label>
+                <!-- <label for="link"></label> -->
                 <input type="text" id="linkInput" required placeholder="Paste here the URL.">
                 <input type="button" id="saveLinkButton" value="Save">
             </form>
@@ -75,7 +75,5 @@
     <script src="/js/links.js"></script>
     <script src="/js/meteo.js"></script> 
     <script src="/js/research.js"></script> 
-
-
 </body>
 </html>

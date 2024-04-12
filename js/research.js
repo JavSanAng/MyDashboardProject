@@ -1,10 +1,10 @@
 function openModal() {
-    document.getElementById('modalDiv').style.display = 'none'; // Ocultar el botón
-    window.modal2.showModal(); // Abre
+    document.getElementById('modalDiv').style.display = 'none'; 
+    window.modal2.show(); 
 }
 
 function closeModal() {
-    window.modal2.close(); // Cierra 
+    window.modal2.close(); 
 }
 
 if( !localStorage.getItem('FirstVisit') ){
