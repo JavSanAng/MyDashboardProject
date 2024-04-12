@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-@font-face {
-    font-family: 'rayada';
-    src: url('./fonts/rayada.ttf') format('truetype');
-}
 
 @font-face {
     font-family: 'pixel';
@@ -11,13 +7,8 @@
 }
 
 @font-face {
-    font-family: 'alta';
-    src: url('./fonts/alta.ttf') format('truetype');
-}
-
-@font-face {
     font-family: 'round';
-    src: url('./fonts/round.ttf') format('truetype');
+    src: url('.\fonts\round.ttf') format('truetype');
 }
 
 body {
